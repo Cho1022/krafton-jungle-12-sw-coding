@@ -37,11 +37,47 @@ def is_palindrome(s):
     # TODO: 알파벳과 숫자만 남기고 소문자로 변환하세요
     # 힌트: isalnum() 메서드와 lower() 메서드 사용
     pass
-    
+    cleaned = ""
+    # for char in s: #s에는"A man, a plan, a canal: Panama" 따라서 char로 받아야한다.
+    #     if char.isalnum():#알파벳과 숫자만 남긴다. isalnum() True/False 반환하는데 if와 궁합으로 쓰인다.
+    #         cleaned += char.lower() #문자열에서는 append가 아닌 "+" 를 사용한다. 소문자로 변환해서 cleaned에 추가한다.
+    #     return cleaned_s == cleaned_s[::-1] #방법1
+        
     # TODO: 정제된 문자열이 회문인지 확인하세요
     # 방법1: 문자열을 뒤집어서 비교 ([::-1] 사용)
     # 방법2: 양 끝 인덱스를 이용한 투 포인터 방식
     pass
+
+    # 1. 알파벳과 숫자만 남기고 소문자로 변환 (전처리)
+    for char in s:
+        if char.isalnum():
+            cleaned += char.lower()
+            
+    # 2. 투 포인터 출동!
+    left = 0
+    right = len(cleaned) - 1 
+    
+    while left < right:
+        # 양쪽 글자가 다르면? 회문 탈락! (바로 False 퇴근)
+        if cleaned[left] != cleaned[right]:
+            return False
+        
+        # 같으면? 다음 글자를 검사하기 위해 손가락 한 칸씩 이동!
+        left += 1
+        right -= 1
+        
+    # while문을 중간에 안 쫓겨나고 무사히 다 끝마쳤다면? 완벽한 회문!
+        return True
+    
+    
+        # TODO 1: 만약 왼쪽 손가락이 가리키는 글자와 오른쪽 글자가 다르다면?
+        # -> 바로 False를 return 하고 끝낸다!
+    
+        # TODO 2: 두 글자가 같다면 (위의 if문을 무사히 통과했다면), 다음 글자를 검사하기 위해 이동!
+        # -> 왼쪽 손가락(left)은 1 더해주고,
+        # -> 오른쪽 손가락(right)은 1 빼준다.
+        
+    # while문을 중간에 안 쫓겨나고 무사히 다 끝마쳤다면? 완벽한 회문입니다!
     
     #return False
 
