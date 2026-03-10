@@ -97,4 +97,3 @@ if __name__ == "__main__":
     print(f"정렬 후: {result3}")
 
 
- ""
