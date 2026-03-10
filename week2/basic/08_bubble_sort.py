@@ -47,7 +47,7 @@ def bubble_sort(arr):
 
 def bubble_sort_optimized(arr):
     """
-    최적화된 버블 정렬 (조기 종료 포함)
+    최적화된 버블 정렬 (조기 종료 포함) .
     
     Args:
         arr: 정렬할 배열
@@ -95,5 +95,3 @@ if __name__ == "__main__":
     print(f"정렬 전: {arr3}")
     result3 = bubble_sort(arr3.copy())
     print(f"정렬 후: {result3}")
-
-
