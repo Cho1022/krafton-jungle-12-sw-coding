@@ -38,6 +38,12 @@ def gcd(a, b):
     # base case: b가 0이면 a 반환
     # recursive를 이용 
     pass
+        # 1. 만약 b가 0이랑 같다면(==), a를 반환(return)하자!
+    if b == 0:
+        return a
+    # 2. 그게 아니라면(else), gcd(b, a % b)를 다시 호출해서 반환(return)하자!
+    else: 
+        return gcd(b , a % b) 
 
 def gcd_iterative(a, b):
     """
@@ -51,6 +57,7 @@ def gcd_iterative(a, b):
     """
     # TODO: 반복문으로 구현
     # b가 0이 될 때까지 반복
+    
     pass
 
 def lcm(a, b):
