@@ -1,2 +1,20 @@
-# 정수론 - 소수 찾기 (백준 브론즈2)
-# 문제 링크: https://www.acmicpc.net/problem/1978
+N = int(input())
+numbers = list(map(int, input().split()))
+
+prime_count = 0
+
+for num in numbers:
+    if num == 1:
+        continue
+
+    is_prime = True
+
+    for i in range(2, num):
+        if num % i == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        prime_count += 1
+
+print(prime_count)
