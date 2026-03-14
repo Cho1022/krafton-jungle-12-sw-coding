@@ -61,6 +61,7 @@ def quick_sort_helper(arr, low, high):
         high: 끝 인덱스
     """
     # TODO: base case - low가 high보다 작을 때만 정렬
+    if 
     ## 분할하여 피벗 인덱스 얻기
     ## 피벗 왼쪽 부분 재귀 정렬
     ## 피벗 오른쪽 부분 재귀 정렬
