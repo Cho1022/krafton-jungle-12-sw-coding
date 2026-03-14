@@ -34,15 +34,18 @@ def partition(arr, low, high):
     Returns:
         피벗의 최종 위치 인덱스
     """
-    # TODO: 피벗을 선택 (일반적으로 마지막 원소)
     pass
-    
-    # TODO: i는 작은 원소들의 마지막 인덱스를 추적
+    if low < high: 
+        pivot = arr[high]  # TODO: 피벗을 선택 (일반적으로 마지막 원소)
+        
     pass
+    i = low - 1 # TODO: i는 작은 원소들의 마지막 인덱스를 추적
     
-    # TODO: low부터 high-1까지 순회하면서
-    ## 현재 원소가 피벗보다 작거나 같으면:
-    ##   1. i를 1 증가
+    for  j in range(low  , high): # TODO: low부터 high-1까지 순회 0,1,2,3,4
+        if arr[j] <= pivot: ## 현재 원소가 피벗보다 작거나 같으면: 3<4 
+            i += 1 # i를 1증가 인덱스를 증가시키는 거야
+            arr[i] , arr[j] = arr[j], arr[i] # TODO: arr[i]와 arr[j]를 인덱스 위치의 값을 교환 
+        arr[i + 1] , arr[high] = arr[high], arr[i + 1] # TODO: 피벗을 올바른 위치(i+1)에 배치
     ##   2. arr[i]와 arr[j]를 교환
     pass
     
@@ -61,7 +64,10 @@ def quick_sort_helper(arr, low, high):
         high: 끝 인덱스
     """
     # TODO: base case - low가 high보다 작을 때만 정렬
-    if 
+    if low < high:
+        index_pivot = partition(arr, low, high) # TODO: 분할하여 피벗 인덱스 얻기
+        quick_sort_helper(arr, low, index_pivot - 1) # TODO: 피벗 왼쪽 부분 재귀 정렬
+        quick_sort_helper(arr, index_pivot + 1, high) # TODO: 피
     ## 분할하여 피벗 인덱스 얻기
     ## 피벗 왼쪽 부분 재귀 정렬
     ## 피벗 오른쪽 부분 재귀 정렬
