@@ -8,10 +8,11 @@ n , m = map(int, input().split())
 
 # n - m =  2로 0 - 1 - 2 까지  연결 
 for i in range(n - m):
-    print(i, i +_1) 
+    print(i, i + 1) 
 #(0 ,1)
 #(1, 2) 이렇게 출력 하면 성공
 
-for j in range(n - m, n - 1):
-    print(j, j + 1)
+for j in range(n - m + 1, n - 1):
+    print(n - m, j + 1)
+    
     
