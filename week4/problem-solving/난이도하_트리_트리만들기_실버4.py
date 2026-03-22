@@ -4,7 +4,7 @@
 import sys
 input = sys.stdin.readline
 # 두 수를 넣고 n = 5 m = 2
-n , m = map(int, input().split())
+n , m = map(int, input().split()) 
 
 # n - m =  2로 0 - 1 - 2 까지  연결 
 for i in range(n - m):
