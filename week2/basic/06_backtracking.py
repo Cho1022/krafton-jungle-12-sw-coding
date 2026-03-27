@@ -38,8 +38,8 @@ def combinations(n, k):
     def backtrack(start, current_combination):
         
         if len(current_combination) == k:
-         result.append(current_combination[:])
-         return
+            result.append(current_combination[:])
+            return
 
         # TODO: start부터 n까지 숫자를 하나씩 시도
         ## TODO: 백트랙킹 3단계 구현
@@ -48,9 +48,9 @@ def combinations(n, k):
         ## 3. 취소(Unchoose)
 
         for i in range(start, n + 1):
-         current_combination.append(i)      # 1. 넣고
-        backtrack(i + 1, current_combination) # 2. 파고들고
-        current_combination.pop()          # 3. 다시 뺀다 (원상복구)
+            current_combination.append(i)        # 1. 넣고
+            backtrack(i + 1, current_combination)  # 2. 파고들고
+            current_combination.pop()            # 3. 다시 뺀다 (원상복구)
    
     backtrack(1, [])
     return result
@@ -94,4 +94,3 @@ if __name__ == "__main__":
     result4 = combinations(n4, k4)
     print(f"C({n4}, {k4}) = {result4}")
     print(f"총 {len(result4)}개의 조합")
-

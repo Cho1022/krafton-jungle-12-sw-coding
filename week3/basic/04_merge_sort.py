@@ -28,8 +28,6 @@ def merge(arr, left, mid, right):
     두 개의 정렬된 부분 배열을 병합하는 함수
     """
     # 1. 왼쪽과 오른쪽 부분 배열을 임시 배열로 복사 (끝점에 +1 해주는 것 잊지 않으셨죠!)
-    left_arr = arr[left: mid + 1]
-    right_arr = arr[mid + 1: right + 1]
 
     # 2. 정찰병 세팅
     i = 0  # left_arr의 카드를 가리킬 정찰병

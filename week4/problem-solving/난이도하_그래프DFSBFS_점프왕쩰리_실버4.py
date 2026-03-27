@@ -31,7 +31,7 @@ def dfs(r ,c ):
         if dfs(nr, nc) == True:
             return True
 
-    # 아래, 오른쪽 모두 가봤는데 길을 못 찾았다면 실패 반환
+    # 아9래, 오른쪽 모두 가봤는데 길을 못 찾았다면 실패 반환
     return False
 
 grid = [list(map(int, input().split())) for _ in range(N)]

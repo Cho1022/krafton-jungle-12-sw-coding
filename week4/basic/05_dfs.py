@@ -15,6 +15,7 @@
 
 예제:
 그래프:
+
   0 ─── 1
   │     │
   └─ 2 ─┘
@@ -44,9 +45,19 @@ def dfs(graph, start, visited=None):
     """
     # TODO: visited가 None이면 초기화
     pass
-    
+    if visited == None: 
+        visited = [] 
+
     # TODO: 현재 정점 방문
     pass
+    visited.append(start)
+    
+    for neighbor in graph[start]:
+    # 방문을 했다면 -> 방문한 것을 visited에 기록
+        if  neighbor not in visited:
+            dfs(graph, neighbor, visited)
+    # 방문 안했다면 -> 어디에 기록해야할까? 
+
     
     # TODO: 인접한 정점들에 대해 재귀
     ## 방문하지 않은 정점이면 재귀 호출

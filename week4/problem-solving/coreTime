@@ -1,0 +1,7 @@
+# https://gemini.google.com/u/1/app/24770a2bb8a06d3b
+# 현재 위치 grid[r][c]가 땅("1")이어야 한다. (문자열 "1"임에 주의!)
+# 그리고 동시에, 방문 기록장 visited[r][c]에 아직 안 가봤다고(False) 적혀 있어야 한다.
+
+import sys
+# bfs/ dfs
+
