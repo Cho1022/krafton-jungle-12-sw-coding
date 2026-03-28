@@ -47,13 +47,21 @@ def make_change_greedy(change, coins):
     ## 현재 동전으로 거슬러줄 수 있는 개수 계산    
     ## 개수가 0보다 크면 결과에 추가
     pass
-    
+    #큰 동전을 하나씩 꺼내서 확인한다. 
+    for cur_coin in coins:
+        count = change // cur_coin #이러면 몫이 나온다.
+        
+        if count > 0: 
+            result[cur_coin] = count
+            total_coins += count
+            change = change % cur_coin   
+            
     return total_coins, result
 
 # 테스트 케이스
 if __name__ == "__main__":
     # 테스트 케이스 1
-    change1 = 1260
+    change1 = 126065  
     coins1 = [500, 100, 50, 10]
     total, details = make_change_greedy(change1, coins1)
     
