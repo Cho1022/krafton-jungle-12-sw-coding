@@ -34,19 +34,28 @@ def select_meetings(meetings):
     """
     # TODO: 회의가 없으면 0 반환
     pass
-    
+    if not meetings:
+        return 0,[]
     # TODO: 종료 시간 기준으로 정렬
     pass
+    meetings.sort(key = lambda x: x[1]) 
     
     selected = []
+    last_end_time = 0 #초기화는 필수!
     
     # TODO: 첫 번째 회의 선택
     pass
+    first_meeting = meetings[0]
+    select_meetings.append(first_meeting)
     
     # TODO: 나머지 회의들 확인
+    last_ene_time = first_meeting[1]
     ## 이전 회의가 끝난 후 시작하는 회의만 선택
     pass
-    
+    for meeting in meetins: 
+        if meeting[0] >= last_ene_time:
+            selected.append(meeting)
+            last_ene_time = meeting[1]
     return len(selected), selected
 
 # 테스트 케이스

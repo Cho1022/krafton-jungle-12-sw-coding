@@ -29,6 +29,7 @@
 - 나머지 금액으로 다음 동전 사용
 """
 
+
 def make_change_greedy(change, coins):
     """
     그리디 알고리즘으로 거스름돈 계산
