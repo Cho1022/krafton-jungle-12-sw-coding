@@ -1,14 +1,6 @@
 # 재귀함수 - 재귀함수가 뭔가요? (백준 실버5)
 # 문제 링크: https://www.acmicpc.net/problem/17478
 
-
-# Base Case (종료 조건): if 현재상태 == 목표상태: return
-
-# 전위 순회 (내려갈 때 할 일): print(질문)
-
-# 재귀 호출 (파고들기): 함수(현재상태 + 1)
-
-# 후위 순회 (스택 풀리며 올라올 때 할 일): print(답변)
 import sys
 input = sys.stdin.readline
 
@@ -44,3 +36,30 @@ def recursive(depth, n):
 # 3. 재귀 함수 호출하기 (최초 호출)
 recursive(0, n) # 최초 호출 -> depth는 0부터 시작, n은
 
+"""
+import sys
+
+def recursive(depth, n):
+    prefix = "____" * depth
+    
+    print(prefix + '"재귀함수가 뭔가요?"')
+    
+    if depth == n:
+        print(prefix + '"재귀함수는 자기 자신을 호출하는 함수라네"')
+    else:
+        print(prefix + '"잘 들어보게. 옛날옛날 한 산 속에 머나먼 곳에 결정하는 재판관이 있었네.')
+        print(prefix + '마을 사람들은 모두 그 선인에게 수많은 질문을 했고, 모두 지혜롭게 대답해 주었지.')
+        print(prefix + '그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었네."')
+        recursive(depth + 1, n)
+        
+    print(prefix + "라고 답변하였지.")
+
+# 입력 받기
+n = int(sys.stdin.readline())
+
+# 시작 문구 출력
+print("어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.")
+
+# 재귀 함수 호출
+recursive(0, n)
+"""
